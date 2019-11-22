@@ -13,32 +13,17 @@ import java.util.List;
 
 import static android.R.layout.*;
 
-public class TerceiraTela<adapter, simple_spinner_dropdown_item> extends AppCompatActivity {
+public class TerceiraTela extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terceira_tela);
     }
-    Spinner spinner = (Spinner) findViewById(R.id.carrosCampo);
-    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-            R.array.carros, simple_spinner_item);
-    adapter.setDropDownViewResource(simple_spinner_dropdown_item);
-    spinner.setAdapter(adapter);
+    Spinner carrosSpinner = (Spinner) findViewById(R.id.carrosCampo);
+   String itemSelecionado = carrosSpinner.getSelectedItem().toString();
+    Spinner problemasSpinner = (Spinner) findViewById(R.id.possiveisProblemasCampo);
+    String itemSelecionado2 = problemasSpinner.getSelectedItem().toString();
+    Spinner pecasSpinner = (Spinner) findViewById(R.id.possiveisPecasCampo);
+    String itemSelecionado3 = pecasSpinner.getSelectedItem().toString();
 }
-    /*
-    String carrosCampo[]{"carro1","carro2","carro3","carro4","carro5"}
-    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, carrosCampo)
-    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-    carrosCampo.setAdapter(adapter);
-
-     */
-/*
-    spinner spinner = (spinner) findViewById(R.id.possiveisProblemasCampo);
-    ArrayList carros = new ArrayList<>(Array.asList("carro1","carro2","carro3","carro4","carro5"));
-    ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,carros);
-    dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-spinner.setAdapter(dataAdapter);
-}
-
-     */
