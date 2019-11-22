@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         String emailDigitado = campoEmail.getText().toString();
         EditText campoSenha = findViewById(R.id.senhaCampo);
         String senhaDigitada = campoSenha.getText().toString();
-        JSONArray todosOsUsuarios = DBHelper.selectAllFromUsuarios();
+        JSONArray todosOsUsuarios = DBHelper.selectAllFromUsuario();
         boolean encontrou = false;
         for (int i = 0; i < todosOsUsuarios.length(); i++) {
             JSONObject usuario = todosOsUsuarios.getJSONObject(i);

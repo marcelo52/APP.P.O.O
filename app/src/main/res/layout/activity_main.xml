@@ -9,9 +9,10 @@
 
     <TextView
         android:id="@+id/nomeAPP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NomeAPP"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:text="InfMec"
+        android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/emailCampo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:ems="10"
+        android:hint="e-mail"
         android:inputType="textPersonName"
-        android:text="E-mail"
+        android:text=""
         app:layout_constraintBottom_toTopOf="@+id/senhaCampo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -35,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
         android:ems="10"
+        android:hint="senha"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/cadastrarButton"
         app:layout_constraintEnd_toEndOf="parent"

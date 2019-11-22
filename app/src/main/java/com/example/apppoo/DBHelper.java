@@ -14,7 +14,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class DBHelper {
-    private static String WEB_SERVICE_URL = "http://192.168.2.154/web_service/";
+    private static String WEB_SERVICE_URL = "http://192.168.43.98/InfMec/";
 
     private static void checkThreadPolicy() {
         int SDK_VERSION = Build.VERSION.SDK_INT;
@@ -27,7 +27,7 @@ public class DBHelper {
     public static int insertIntoUsuario(String nome, String email, String senha) throws IOException {
         checkThreadPolicy();
         String values = "nome="+nome+"&email="+email+"&senha="+senha;
-        URL url = new URL(WEB_SERVICE_URL + "ws_insert/ws_insert_usuarios.php?"+values);
+        URL url = new URL(WEB_SERVICE_URL + "ws_insert/ws_insert_usuarios.php"+values);
         HttpURLConnection conexao = (HttpURLConnection) url.openConnection();
         BufferedReader br = new BufferedReader(new InputStreamReader(conexao.getInputStream()));
         String resposta = br.readLine();
@@ -38,7 +38,7 @@ public class DBHelper {
         }
     }
 
-    public static JSONArray selectAllFromUsuarios() throws IOException, JSONException {
+    public static JSONArray selectAllFromUsuario() throws IOException, JSONException {
         checkThreadPolicy();
         URL url = new URL(WEB_SERVICE_URL + "ws_read/ws_read_usuarios.php");
         HttpURLConnection conexao = (HttpURLConnection) url.openConnection();
