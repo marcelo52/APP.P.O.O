@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">APP.P.O.O</string>
+    <string name="carro">carro</string>
+    <string-array name="carros">
+        <item>carro1</item>
+        <item>carro2</item>
+        <item>carro3</item>
+        <item>carro4</item>
+        <item>carro5</item>
+    </string-array>
+    <string-array name="problemas">
+        <item>problema1</item>
+        <item>problema2</item>
+        <item>problema3</item>
+        <item>problema4</item>
+        <item>problema5</item>
+    </string-array>
+    <string-array name="pecas">
+        <item>peça1</item>
+        <item>peça2</item>
+        <item>peça3</item>
+        <item>peça4</item>
+        <item>peça5</item>
+    </string-array>
 </resources>
