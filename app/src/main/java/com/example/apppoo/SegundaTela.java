@@ -2,6 +2,7 @@ package com.example.apppoo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -30,6 +31,8 @@ public class SegundaTela extends AppCompatActivity {
         int resposta = DBHelper.insertIntoUsuario(nome, email, senha);
         if (resposta == 1) {
             Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, TerceiraTela.class);
+            startActivity(intent);
         } else {
             Toast.makeText(this, "Erro! Cadastro não realizado!", Toast.LENGTH_LONG).show();
         }
